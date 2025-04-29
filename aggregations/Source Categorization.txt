@@ -1,0 +1,14 @@
+These LOD expressions were used to categorize source as either Rgular or transient.
+
+First a Churn was calculated based on the number of days a source was observed.
+Churn Score:
+{ FIXED [Source IP]: COUNTD(DATETRUNC('day', [Fixed Timestamp])) } / 
+{ FIXED : COUNTD(DATETRUNC('day', [Fixed Timestamp])) }
+
+Then a Dynamic Threshold were extracted, based on the Calulcated Churn Score Mean and Standard deviation.
+Dynamic Threshold:
+{ FIXED : AVG([Churn Score]) } + 1 * { FIXED : STDEV([Churn Score]) }
+
+If the Churn score of the source were greater than or equal to the Dynamic Treshold it was categorized as Regular.
+Categorization:
+IF [Churn Score] >= [Dynamic Threshold] THEN "Regular" ELSE "Transient" END
