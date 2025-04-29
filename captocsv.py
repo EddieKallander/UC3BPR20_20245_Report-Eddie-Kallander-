@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #----------------------------------------------------------------#
-# Prints converrts high level info fropm pcap to CSV
+# Prints converts high level info from pcap to CSV
 # (c) 2020 Barry Irwin
 # Edits of script conducted by
 # (c) 2024 Eddie Kallander 
