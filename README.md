@@ -4,6 +4,6 @@ SUBMITTED IN PARTIAL FULFILLMENT OF THE REQUIREMENTS FOR THE AWARD OF THE DEGREE
 
 
 This repository functions the submission of the artefact requirement.
-As a part of the artefact developed by the author you will find, developted script for data transformation, relevant customized calculated fields used for aggregation
+This includes the pyhton script developed by the author, additionally there are relevant customized calculated fields used for aggregation.
 
-Each respective folder includes a description of usage
+Each respective folder includes a description of usage.
