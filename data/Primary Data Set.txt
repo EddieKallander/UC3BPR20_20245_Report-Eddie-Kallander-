@@ -1,0 +1,8 @@
+The dataset that was used for this research was Internet Background Radiation (IBR) traffic that has
+been captured by a Network Telescope operated on the SANREN Network by The National Integrated
+Cyber Infrastructure System (NICIS). The dataset was provided by Professor Barry Irwin. The data was provided as PCAP data files.
+
+The primary ethical consideration that was taken into account was ensuring that the monitored range
+of the network telescope were not disclosed.
+
+There was no foreseen risks in the data set and/or data processing.
