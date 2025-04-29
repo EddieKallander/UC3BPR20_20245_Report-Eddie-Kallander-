@@ -1,0 +1,7 @@
+This LOD expression were used to calculate the Churn Rate of arriving and departing sources
+
+IF COUNTD([Entered IPs Daily]) != 0 THEN 
+  COUNTD([Exited IPs Daily]) / COUNTD([Entered IPs Daily]) 
+ELSE 
+  NULL 
+END
