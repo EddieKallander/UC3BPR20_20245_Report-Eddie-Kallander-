@@ -1,0 +1,36 @@
+These expressions calculated the distribtuions by percentage.
+
+Total Entries:
+COUNT([Source IP]) / SUM({ FIXED : COUNT([Source IP]) })
+
+Unique Sources:
+COUNTD([Source IP]) / SUM({ FIXED : COUNTD([Source IP]) })
+
+Entered IPs:
+COUNTD([Entered IPs Monthly]) / COUNTD([Source IP])
+
+Exited IPs:
+COUNTD([Exited IPs Monthly]) / COUNTD([Source IP])
+
+TCP:
+COUNT([Source IP]) / SUM({ FIXED : COUNT(IF STR([Protocol]) = "6" THEN [Source IP] END)  })
+
+UDP:
+COUNT([Source IP]) / SUM({ FIXED : COUNT(IF STR([Protocol]) = "17" THEN [Source IP] END)  })
+
+ICMP:
+COUNT([Source IP]) / SUM({ FIXED : COUNT(IF STR([Protocol]) = "1" THEN [Source IP] END)  })
+
+/16:
+COUNTD([/16 block]) / MIN({ FIXED : COUNTD([/16 block]) })
+
+/24:
+COUNTD([/24 block]) / MIN({ FIXED : COUNTD([/24 block]) })
+
+USA:
+COUNT([Source IP]) / 
+SUM({ FIXED : SUM(IIF([Source Country] = "United States", 1, 0)) })
+
+This aggregation was used when precentage calculations were needed based on the windowed aggregated data
+Windowed:
+COUNT([Source IP]) / WINDOW_SUM(COUNT([Source IP]))
