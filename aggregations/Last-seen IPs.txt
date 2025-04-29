@@ -1,0 +1,11 @@
+These aggregation were used to count the last time a source IP were observed.
+
+Monthly basis:
+IF { FIXED [Source IP]: MAX(DATETRUNC('month', [Fixed Timestamp])) } = DATETRUNC('month', [Fixed Timestamp])
+THEN [Source IP] 
+END
+
+Daily basis:
+IF { FIXED [Source IP]: MAX(DATETRUNC('day', [Fixed Timestamp])) } = DATETRUNC('day', [Fixed Timestamp])
+THEN [Source IP] 
+END
