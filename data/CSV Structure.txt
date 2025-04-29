@@ -1,1 +1,17 @@
+The CSV files contain tranformated capture data transformed by the python script.
+Each CSV relates to its respective month of capture, determined by the month number within the filename.
+Each header describes the extracted IP header fields as follows:
+"Timestamp", "Source IP", "Source Country", "Source City", "Destination IP", "TTL", "IP Length", "Protocol", "Source Port", "Destination Port"
 
+
+Fields Extracted         Description
+Timestamp           The moment in time where packet was received
+Source IP           The IP address of the source
+Source Country      The geolocated country by Source IP
+Source City         The geolocated city by Source IP
+Destination IP      The IP address of the destination
+TTL                 Time to live value
+IP Length           IP header size in bytes
+Protocol            Which protocol used by packet
+Source Port         Which port packet was sent
+Destination Port    Which port packet was received
