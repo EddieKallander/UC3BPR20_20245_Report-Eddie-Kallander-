@@ -1,0 +1,16 @@
+This expression were used to properly handlethe number of digits in the timestamps microseconds, as tableau did not acknowledge this by default.
+
+Fixed Timestamp:
+IF LEN(TRIM([Timestamp])) >= 21 THEN
+    DATETIME(TRIM([Timestamp]))
+
+ELSEIF LEN(TRIM([Timestamp])) = 19 THEN
+    DATETIME(LEFT(TRIM([Timestamp]), 19))
+
+ELSEIF LEN(TRIM([Timestamp])) < 19 THEN
+    // Handle timestamps that are too short (possible data corruption)
+    NULL
+
+ELSE
+    DATETIME(TRIM([Timestamp]))
+END
