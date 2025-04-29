@@ -7,4 +7,4 @@ SUBMITTED IN PARTIAL FULFILLMENT OF THE REQUIREMENTS FOR THE AWARD OF THE DEGREE
 This repository functions the submission of the artefact requirement.
 This includes the python script developed by the author, additionally there are relevant customized calculated fields used for aggregation.
 
-Each respective folder includes a description of usage.
+Each respective folder in the repository includes a description of usage.
